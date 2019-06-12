@@ -42,7 +42,7 @@ main{
     padding: 20px 0;
     
 }
-.body-parts{
+.body-parts, section{
     padding: 50px;
     border: solid 1px;
     background: lightblue;
@@ -59,6 +59,11 @@ button{
     background: lightgray;
     font-size: 30px;
 }
-footer{
-    margin-top: 130px;
+section {
+    margin-top: 50px;
+}
+
+#js-next-button, #js-restart-button{
+    float: right;
+    margin: 0;
 }
