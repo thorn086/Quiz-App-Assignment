@@ -67,3 +67,10 @@ section {
     float: right;
     margin: 0;
 }
+
+.anatomyForm{
+    display: none;
+    width: 50%;
+}
+
+/*Start at 320 px wide*/

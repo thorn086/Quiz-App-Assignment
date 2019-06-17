@@ -7,8 +7,7 @@
     <title>Human Anatomy Quiz</title>
     <meta name="description" content="Test your knowledge of the human body, bones and systems"/>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css">
-    <link href="main.css" rel="stylesheet" type="text/css"/>
-    
+    <link href="main.css" rel="stylesheet" type="text/css"/>  
 </head>
 <body>
 
@@ -16,7 +15,7 @@
         <h1>Human Anatomy Quiz</h1>
       <div class="nav js-nav">
         <ul>
-            <li> Question: <span class="humanpart">0</span>/10</li>
+            <li> Question: <span class="humanPart">0</span>/10</li>
             <li> Score: <span class="score">0</span></li>
         </ul>
       </div>
@@ -25,25 +24,18 @@
     <main role="main">
         <div class="body-parts">
             <h2>Lets see if you're as smart as your Doctor.</h2>
-            <button type="button" class="startquiz">Doctor's in!</button>
+            <button type="button" class="startQuiz">Doctor's in!</button>
         </div>
-        <div class="anatomyForm"></div>
-    
-         <section class="feedback-page" role="main">
-            <h2>Correct!</h2>
-            <h3>You're on your way to becoming the Doctor</h3>
-            <button id="js-next-button">Next</button>
-          </section>
-          <section id="final-page">
-                <h2>Final Score: 0 out of 10</h2>
-                <h3>You are on par with "....."</h3>
-                <button id="js-restart-button">More School?</button>
-          </section>
+        <div class="anatomyForm"></div>       
     </main>
 
     <footer>
         <p>Copy write 2019 Darren Rose, ATC</p>
     </footer>
-    
+    <script
+    src="http://code.jquery.com/jquery-3.4.1.js"
+    integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
+    crossorigin="anonymous"></script>
+    <script src="index.js"></script>
 </body>
 </html>
