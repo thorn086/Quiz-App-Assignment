@@ -25,9 +25,7 @@ h1{
 ul li{
     list-style: none;
 }
-ul{
-    
-    
+ul {
     height: 100px;
     padding: 30px;
     display: flex;
@@ -45,32 +43,36 @@ li {
 main{
     width: 100%;
     height: 300px;
-    padding: 20px 0;
+    padding: 5px 0;
     
 }
 .body-parts, section{
-    padding: 50px;
+    padding: 10px;
     
 }
+.body-parts > h2{
+    font-size: 45px;
+}
 h2{
-    font-size: 40px;
-    margin-top: 15px;
+    font-size: 30px;
+    margin-top: 5px;
     background-color: rgb(53, 54, 54);
     border-radius: 12%;
     color:rgb(96, 223, 37);
+    width: 100%;
+    height: 100px;
 }
 .startQuiz {
     font-size: 30px;
 }
-button{
+button {
     width: 200px;
     height: 75px;
     margin-top:30px;
     
 }
-li, button{
+li, button {
     background: rgb(38, 240, 12);
-    background-blend-mode: darken;
     border: solid  white 1px;
     border-radius: 10%;
     
@@ -90,7 +92,11 @@ h1 {
 
 .anatomyForm{
     display: none;
-    width: 50%;
+    margin: auto;
+    width: 80%;
+    padding: 5px;
+    height: 450px;
+    
 }
 
 footer{
@@ -106,25 +112,16 @@ footer{
     width: 250px;
     height: 40px;
     position: absolute;
-    bottom: 50px;
-    left: 321px;
+    bottom: 80px;
+    left: 275px;
     font-size: 25px;
 }
 
-.anatomyForm{
-    
-    margin: auto;
-    width: 60%;
-    padding: 5px;
-    height: 450px;
-
-}
 fieldset{
-    width: 513px;
-    height: 250px;
     border: none;
-   
 }
+
+
 label{
     display: flex;
     flex-flow: nowrap;
@@ -174,6 +171,7 @@ span{
     width: 250px;
     height: 40px;
     font-size: 30px;
+    padding: 1px;
 }
 
 .answerCorrect > p {
@@ -192,7 +190,7 @@ img {
     height: 200px;
     width:200px;
     position: absolute;
-    top: 54%;
+    top: 52%;
     left: 39%;
 }
 
@@ -208,4 +206,28 @@ h3 {
     font-size: 30px;
 }
 
+span, h2, h3 {
+    font-family: 'Libre Baskerville', serif;
+}
+
+@media screen and (min-width: 450px){
+
+    .choices{
+        width: 50%;
+        height: 100px;
+        flex: 1 1 50%;
+        
+    }
+    fieldset {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+
+    }
+   
+
+
+    
+
+}
 /*Start at 320 px wide*/

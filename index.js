@@ -20,7 +20,7 @@ const STORE = [
         cor: "Circular System"
     },
 
-    {
+    /*{
         question: "How many bones are in the human body?",
         ans: ["200",
             "186",
@@ -57,7 +57,7 @@ const STORE = [
     },
 
     {
-        question: "When testing for an ACL tear in the Knee Joint, which test is the best utilized for this?",
+        question: "Which test is best for detecting an ACL tear?",
         ans: ["Bump Test",
             "Houston's Test",
             "Varus Test",
@@ -90,7 +90,7 @@ const STORE = [
             "Anterior Cruciate Ligament",
             "Posterior Cruciate Ligament"],
         cor: "Lateral Collateral Ligament"
-    },
+    },*/
 
 ];
 
@@ -237,11 +237,16 @@ function restartQuiz() {
         $('.score').text(0);
         $('.body-parts').css('display', 'block');
         $('.anatomyForm').css('display', 'none'); 
-        doesItAll();
+        doThisNext();
     });
     
 }
+function doThisNext(){
+    handleStartButton();
+    displayQuestion();
+    handleSubmitButton();
 
+}
 // create one function to do it all
 function doesItAll() {
     handleStartButton();
