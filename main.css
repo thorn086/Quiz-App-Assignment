@@ -5,35 +5,39 @@
 }
 body{
     text-align: center;
+    background: url('pics/background.jpeg') fixed;
+    height: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 header{
     width: 100%;
     padding: 20px 0;
     margin-top: 40px;
+    
 }
 h1{
-    font-size: 50px;
+    font-size: 70px;
 }
 ul li{
     list-style: none;
 }
 ul{
     
-    border: solid 1px;
+    
     height: 100px;
     padding: 30px;
     display: flex;
     justify-content: space-around;
     margin-top: 40px;
-    background: lightblue;
+    
 }
 li {
-    
-    background: lightgray;
-    border: solid 1px;
     width: 150px;
     height: 40px;
     padding: 8px;
+    font-size: 19px;
 }
 
 main{
@@ -44,25 +48,39 @@ main{
 }
 .body-parts, section{
     padding: 50px;
-    border: solid 1px;
-    background: lightblue;
+    
 }
 h2{
     font-size: 40px;
     margin-top: 15px;
+    background-color: rgb(53, 54, 54);
+    border-radius: 12%;
+    color:rgb(96, 223, 37);
+}
+.startQuiz {
+    font-size: 30px;
 }
 button{
     width: 200px;
     height: 75px;
     margin-top:30px;
-    border: solid 1px;
-    background: lightgray;
-    font-size: 30px;
+    
+}
+li, button{
+    background: rgb(38, 240, 12);
+    background-blend-mode: darken;
+    border: solid  white 1px;
+    border-radius: 10%;
+    
 }
 section {
     margin-top: 50px;
 }
 
+h1 {
+    color:rgb(96, 223, 37);
+    text-shadow:  3px 3px  black;
+}
 #js-next-button, #js-restart-button{
     float: right;
     margin: 0;
@@ -71,6 +89,121 @@ section {
 .anatomyForm{
     display: none;
     width: 50%;
+}
+
+footer{
+    position: fixed;
+    bottom: 1px;
+    left: 5px;
+    font-size: 15px;
+    color: white;
+    
+}
+
+.submitButton{
+    width: 250px;
+    height: 40px;
+    position: absolute;
+    bottom: 60px;
+    left: 321px;
+    font-size: 25px;
+}
+
+.anatomyForm{
+    
+    margin: auto;
+    width: 60%;
+    padding: 5px;
+    height: 450px;
+
+}
+fieldset{
+    width: 513px;
+    height: 250px;
+    border: none;
+   
+}
+label{
+    display: flex;
+    flex-flow: nowrap;
+    background: rgb(185, 134, 233)
+    
+}
+input{
+    padding: 1px;
+    margin: 9px;
+}
+.choices {
+    flex: 1 1 auto;
+    height: 50px;
+    margin: 10px;
+    border: solid 1px;
+    font-size: 25px;
+    padding:2px;
+    justify-content: flex-start;
+    
+}
+
+label:hover, label:focus {
+    background-color: yellow;
+    transform: scale(1.1);
+
+}
+.startQuiz:hover, .submitButton:hover, .next:hover, .restartQuiz:hover {
+    background-color: rgb(87, 53, 235);
+}
+input{
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    outline: none;
+    position: relative;
+    margin-bottom: 8px;
+}
+span{
+    width:100%;
+    margin: auto;
+}
+ input:checked + span    {
+    background-color: yellow;
+}
+
+.next, .restartQuiz {
+    width: 250px;
+    height: 40px;
+    font-size: 30px;
+}
+
+.answerCorrect > p {
+    font-size: 30px;
+    color: white;
+    background-color: rgb(87, 53, 235);
+    width: 100%;
+    height: 300px;
+}
+.answerCorrect > p::first-letter{
+    font-size: 70px;
+    color: red;
+    font-weight: bolder;
+}
+img {
+    height: 200px;
+    width:200px;
+    position: absolute;
+    top: 49%;
+    left: 39%;
+}
+
+h3 {
+    color:yellow;
+    font-size: 40px;
+}
+.result {
+    background-color:  rgb(87, 53, 235);
+}
+.result > p {
+    color: white;
+    font-size: 30px;
 }
 
 /*Start at 320 px wide*/

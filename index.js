@@ -50,10 +50,10 @@ const STORE = [
     {
         question: "In the Respiratory System, what is the primary role of the lungs?",
         ans: ["Remove CO2 and add O2 to the hemoglobin",
-            "remove CO2 and add H2O to the hemoglobin",
-            "add O2 to the hemoglobin only",
-            "remove H2O, CO2 and add O2 to the hemoglobin"],
-        cor: "remove H2O, CO2 and add O2 to the hemoglobin"
+            "Remove CO2 and add H2O to the hemoglobin",
+            "Add O2 to the hemoglobin only",
+            "Remove H2O, CO2, Add O2 to hemoglobin"],
+        cor: "Remove H2O, CO2, Add O2 to hemoglobin"
     },
 
     {
@@ -183,12 +183,13 @@ function wrongAnswer() {
 // feedback if answer is correct
 function correctAnswerFeedback() {
     let correct = `${STORE[humanPart].cor}`;
-    $('.anatomyForm').html(`<div class ="answerCorrect"><p><b>You saved the Patient!</b></p><button class ="next">Next</button></div>`);
+    $('.anatomyForm').html(`<div class ="answerCorrect"><div id ="correct"><img src="pics/correct.jpeg" alt="correct image"/></div><p><b>You saved the Patient!</b></p><button class ="next">Next</button></div>`);
 }
 // feedback if answer is wrong
 function wrongAnswerFeedback() {
     let correct = `${STORE[humanPart].cor}`;
-    $('.anatomyForm').html(`<div class ="answerCorrect"><p><b>Careful, you're losing Patients!</b></p><button class ="next">Next</button></div>`);
+    $('.anatomyForm').html(`<div class ="answerCorrect">
+    <div id ="wrong"><img src="pics/wrong.jpeg" alt="wrong image"/></div><p><b>Careful, you're losing Patients!</b></p><button class ="next">Next</button></div>`);
 }
 
 function handleNextQuestion() {
@@ -235,10 +236,10 @@ function restartQuiz() {
         score = 0;
         $('.score').text(0);
         $('.body-parts').css('display', 'block');
-        $('.anatomyForm').css('display', 'none');
+        $('.anatomyForm').css('display', 'none'); 
         doesItAll();
     });
-
+    
 }
 
 // create one function to do it all
@@ -247,8 +248,9 @@ function doesItAll() {
     displayQuestion();
     handleSubmitButton();
     handleNextQuestion();
+    restartQuiz();
 }
 
-$(doesItAll());
+ $(doesItAll());
 
 
