@@ -19,8 +19,9 @@ header{
     margin-top: 40px;
     
 }
+
 h1{
-    font-size: 70px;
+    font-size: 50px;
 }
 ul li{
     list-style: none;
@@ -51,7 +52,7 @@ main{
     
 }
 .body-parts > h2{
-    font-size: 45px;
+    font-size: 35px;
 }
 h2{
     font-size: 30px;
@@ -113,7 +114,7 @@ footer{
     height: 40px;
     position: absolute;
     bottom: 80px;
-    left: 275px;
+    left: 165px;
     font-size: 25px;
 }
 
@@ -137,7 +138,7 @@ input{
     height: 50px;
     margin: 10px;
     border: solid 1px;
-    font-size: 25px;
+    font-size: 19px;
     padding:2px;
     justify-content: flex-start;
     
@@ -190,8 +191,8 @@ img {
     height: 200px;
     width:200px;
     position: absolute;
-    top: 52%;
-    left: 39%;
+    top: 47%;
+    left: 33%;
 }
 
 h3 {
@@ -210,24 +211,55 @@ span, h2, h3 {
     font-family: 'Libre Baskerville', serif;
 }
 
-@media screen and (min-width: 450px){
 
-    .choices{
-        width: 50%;
-        height: 100px;
-        flex: 1 1 50%;
-        
+
+
+
+@media screen and (min-width: 768px){
+
+    h1{ 
+        font-size: 80px;
     }
-    fieldset {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: space-between;
+    h2{
+        font-size: 40px;
+    }
+   h3{
+       font-size: 30px;
+   }
 
+   li {
+    width: 250px;
+    height: 60px;
+    padding: 10px;
+    font-size: 25px;
+}
+    .container1, .container2{
+        width: 100%;
+        display: inline-flex;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+    
+  .choices{ 
+      width: 250px;
+      height: 100px;
+      font-size: 25px;
+      
     }
    
 
-
-    
+  .submitButton{
+    height: 70px;
+    position: relative;
+    left: 6px;
+    bottom: 20px;
+   }
+   img{
+    height: 200px;
+    width:200px;
+    position: absolute;
+    top: 52%;
+    left: 46%;
+   }
 
 }
-/*Start at 320 px wide*/

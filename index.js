@@ -20,7 +20,7 @@ const STORE = [
         cor: "Circular System"
     },
 
-    /*{
+    {
         question: "How many bones are in the human body?",
         ans: ["200",
             "186",
@@ -90,7 +90,7 @@ const STORE = [
             "Anterior Cruciate Ligament",
             "Posterior Cruciate Ligament"],
         cor: "Lateral Collateral Ligament"
-    },*/
+    },
 
 ];
 
@@ -104,6 +104,7 @@ function createForm() {
             <h2>${STORE[humanPart].question}</h2>
             <form>
                 <fieldset>
+                <div class="container1">
                     <label class="choices">
                         <input type="radio" value='${STORE[humanPart].ans[0]}' name="answer" required></input>
                         <span>${STORE[humanPart].ans[0]}</span>
@@ -112,6 +113,8 @@ function createForm() {
                         <input type="radio" value="${STORE[humanPart].ans[1]}" name="answer" required></input>
                         <span>${STORE[humanPart].ans[1]}</span>
                     </label>
+                    </div>
+                    <div class="container2">
                     <label class="choices">
                         <input type="radio" value="${STORE[humanPart].ans[2]}" name="answer" required></input>
                         <span>${STORE[humanPart].ans[2]}</span>
@@ -120,6 +123,7 @@ function createForm() {
                         <input type="radio" value="${STORE[humanPart].ans[3]}" name="answer" required></input>
                         <span>${STORE[humanPart].ans[3]}</span>
                     </label>
+                    </div>
                     <button type="submit" class ="submitButton">Enter</button>
                 </fieldset>
             </form>
@@ -183,13 +187,13 @@ function wrongAnswer() {
 // feedback if answer is correct
 function correctAnswerFeedback() {
     let correct = `${STORE[humanPart].cor}`;
-    $('.anatomyForm').html(`<div class ="answerCorrect"><div id ="correct"><img src="pics/correct.jpeg" alt="correct image"/></div><p><b>You saved the Patient!</b></p><button class ="next">Next</button></div>`);
+    $('.anatomyForm').html(`<div class ="answerCorrect"><div id ="correct"><img src="pics/correct.jpeg" alt="correct image"/></div><p>You saved the Patient!</p><button class ="next">Next</button></div>`);
 }
 // feedback if answer is wrong
 function wrongAnswerFeedback() {
     let correct = `${STORE[humanPart].cor}`;
     $('.anatomyForm').html(`<div class ="answerCorrect">
-    <div id ="wrong"><img src="pics/wrong.jpeg" alt="wrong image"/></div><p><b>Careful, you're losing Patients!</b></p><button class ="next">Next</button></div>`);
+    <div id ="wrong"><img src="pics/wrong.jpeg" alt="wrong image"/></div><p>Careful, you're losing Patients!</p><button class ="next">Next</button></div>`);
 }
 
 function handleNextQuestion() {
